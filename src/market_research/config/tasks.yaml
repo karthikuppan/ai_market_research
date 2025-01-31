@@ -1,0 +1,214 @@
+market_research:
+  description: >
+    Conduct a comprehensive market analysis for {product_name}.
+
+    Use web search to gather the latest data and trends.
+
+    If provided, consider this additional context: {context}
+
+    Focus on:
+    1. Market size and growth potential
+    2. Key market trends
+    3. Target market segments
+    4. Competitive landscape
+    5. Market opportunities and challenges
+
+    For any numerical data, present it in a structured format using the following markers:
+
+    For pie charts (e.g., market share):
+    [CHART_DATA type=pie title="Market Share Distribution"]
+    - Company A: 35%
+    - Company B: 25%
+    - Company C: 20%
+    - Others: 20%
+    [/CHART_DATA]
+
+    For line charts (e.g., growth trends):
+    [CHART_DATA type=line title="Market Growth Trend"]
+    Years:
+    - 2020: $50M
+    - 2021: $75M
+    - 2022: $100M
+    - 2023: $150M
+    - 2024 (projected): $200M
+    [/CHART_DATA]
+
+    For bar charts (e.g., segment comparison):
+    [CHART_DATA type=bar title="Market Segments"]
+    Segments:
+    - Enterprise: 45%
+    - SMB: 30%
+    - Consumer: 25%
+    [/CHART_DATA]
+
+    For tables (e.g. competitor analysis)
+
+    [TABLE_DATA title="Competitor Comparison"]
+    | Competitor | Market Share | Customer Satisfaction |
+    |------------|--------------|-----------------------|
+    | Company A  | 35%         | 8.5                    |
+    | Company B  | 25%         | 7.8                    |
+    | Company C  | 20%         | 8.0                    |
+    | Others     | 20%         | 7.2                    |
+    [/TABLE_DATA]
+
+    Format your response with:
+    1. Clear sections and bullet points for qualitative analysis
+    2. Structured chart data for quantitative insights
+    3. Tables for comparing information
+    4. Specific recommendations based on the data
+  expected_output: >
+    A comprehensive market analysis report with visualizable data.
+  agent: market_researcher
+  async_execution: true
+
+consumer_analysis:
+  description: >
+    Conduct a comprehensive consumer analysis for {product_name}.
+
+    Use web search to gather the latest data and trends.
+
+    If provided, consider this additional context: {context}
+
+    Focus on:
+    1. Key consumer segments and demographics
+    2. Consumer preferences and behavior patterns
+    3. Purchase decision factors
+    4. Consumer trends and future outlook
+    5. Pain points and opportunities
+
+    For any numerical data, present it in a structured format using the following markers:
+
+    For pie charts (e.g., age distribution):
+    [CHART_DATA type=pie title="Age Distribution"]
+    - 18-24: 15%
+    - 25-34: 30%
+    - 35-44: 25%
+    - 45-54: 20%
+    - 55+: 10%
+    [/CHART_DATA]
+
+    For bar charts (e.g., purchase factors):
+    [CHART_DATA type=bar title="Key Purchase Factors"]
+    Factors:
+    - Price: 85%
+    - Quality: 75%
+    - Brand: 60%
+    - Features: 55%
+    - Reviews: 45%
+    [/CHART_DATA]
+
+    For line charts (e.g., adoption trends):
+    [CHART_DATA type=line title="Consumer Adoption Trend"]
+    Quarters:
+    - Q1 2023: 1000
+    - Q2 2023: 2500
+    - Q3 2023: 4000
+    - Q4 2023: 6000
+    - Q1 2024: 8500
+    [/CHART_DATA]
+
+    For tables (e.g., customer feedback):
+
+    [TABLE_DATA title="Customer Feedback"]
+    | Feature       | Positive Feedback | Negative Feedback |
+    |---------------|-------------------|-------------------|
+    | Price         | 20%               | 80%               |
+    | Quality       | 70%               | 30%               |
+    | Design        | 60%               | 40%               |
+    | Functionality | 85%               | 15%               |
+    [/TABLE_DATA]
+
+    Format your response with:
+    1. Clear sections and bullet points for qualitative analysis
+    2. Structured chart data for quantitative insights
+    3. Tables for comparing information
+    4. Specific recommendations based on consumer insights
+  expected_output: >
+    A comprehensive consumer analysis report with visualizable data.
+  agent: consumer_analyst
+  async_execution: true
+
+industry_analysis:
+  description: >
+    Conduct a comprehensive industry analysis for {product_name}.
+
+    Use web search to gather the latest data and trends.
+
+    If provided, consider this additional context: {context}
+
+    Focus on:
+    1. Industry structure and dynamics
+    2. Regulatory environment and compliance
+    3. Technological trends and disruptions
+    4. Supply chain considerations
+    5. Industry best practices and standards
+
+      For any numerical data, present it in a structured format using the following markers:
+
+    For pie charts (e.g., regulatory compliance):
+    [CHART_DATA type=pie title="Regulatory Compliance"]
+    - Compliant: 80%
+    - Non-Compliant: 20%
+    [/CHART_DATA]
+
+    For line charts (e.g., technology adoption):
+    [CHART_DATA type=line title="Technology Adoption"]
+    Years:
+    - 2020: 20%
+    - 2021: 35%
+    - 2022: 50%
+    - 2023: 65%
+    - 2024 (projected): 80%
+    [/CHART_DATA]
+
+    For bar charts (e.g., supply chain performance):
+      [CHART_DATA type=bar title="Supply Chain Performance"]
+    Segments:
+    - In-house: 40%
+    - Local Suppliers: 35%
+    - International Suppliers: 25%
+    [/CHART_DATA]
+
+    For tables (e.g., key industry benchmarks):
+    [TABLE_DATA title="Key Industry Benchmarks"]
+    | Metric              | Benchmark | Current  |
+    |---------------------|-----------|----------|
+    | Innovation Rate     | 7         | 7.5        |
+    | Compliance Index    | 8         | 7.8       |
+    | Supply Chain Eff   | 7.5          | 6.5      |
+    [/TABLE_DATA]
+    Format your response with:
+    1. Clear sections and bullet points for qualitative analysis
+    2. Structured chart data for quantitative insights
+    3. Tables for comparing information
+    4. Specific recommendations for industry positioning.
+  expected_output: >
+    A comprehensive industry analysis report with visualizable data.
+  agent: industry_analyst
+  async_execution: true
+
+research_synthesis:
+  description: >
+    Synthesize the following research findings for {product_name} into strategic recommendations:
+
+    If provided, consider this additional context: {context}
+                
+    Focus on:
+    1. Key insights synthesis
+    2. Strategic opportunities
+    3. Risk assessment
+    4. Implementation considerations
+    5. Success metrics
+
+    Format your response with clear sections and bullet points.
+    Conclude with prioritized action items.
+  expected_output: >
+    A strategic synthesis of market research findings with actionable recommendations and implementation plan.
+    Formatted as markdown without '```'
+  agent: research_manager
+  context:
+    - market_research
+    - consumer_analysis
+    - industry_analysis
+  output_file: market_research_report.md
